@@ -1,0 +1,11 @@
+node_modules/
+package-lock.json
+dist/
+app/
+.installed/
+.runtime/
+*.log
+.env*
+!.env.example
+.DS_Store
+Thumbs.db
