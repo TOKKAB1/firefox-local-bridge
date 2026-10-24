@@ -1,0 +1,6 @@
+{
+  "name": "firefox-local-bridge",
+  "version": "0.2.0",
+  "description": "Opt-in Firefox browser sessions through a local native-messaging MCP bridge.",
+  "mcpServers": "./.mcp.json"
+}
