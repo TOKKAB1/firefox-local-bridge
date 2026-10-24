@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Firefox Local Bridge",
+  "version": "0.2.0",
+  "description": "Connect an explicitly enabled Firefox session to a local MCP assistant.",
+  "permissions": ["activeTab", "nativeMessaging", "storage"],
+  "optional_permissions": ["tabs", "http://*/*", "https://*/*"],
+  "incognito": "spanning",
+  "background": { "scripts": ["policy.js", "background.js"] },
+  "browser_action": {
+    "default_title": "Firefox Local Bridge",
+    "default_popup": "popup.html",
+    "default_icon": "icon.svg"
+  },
+  "icons": { "48": "icon.svg", "96": "icon.svg" },
+  "browser_specific_settings": {
+    "gecko_android": { "strict_min_version": "142.0" },
+    "gecko": {
+      "id": "firefox-local-bridge@local.invalid",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["websiteContent", "browsingActivity", "websiteActivity"]
+      }
+    }
+  },
+  "content_security_policy": "script-src 'self'; object-src 'none'"
+}
